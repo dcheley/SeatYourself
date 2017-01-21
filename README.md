@@ -8,5 +8,6 @@
 #Command Line Setup
 1. "bundle install"
 2. "rails s"
-3. Open a web browser.
-4. Enter 'localhost:3000.com' into the URL to view and use the app.
+3. "rails db:seed"
+4. Open a web browser.
+5. Enter 'localhost:3000.com' into the URL to view and use the app.
