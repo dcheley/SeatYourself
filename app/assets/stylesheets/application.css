@@ -18,9 +18,12 @@
     font-family: 'Lato', sans-serif;
   }
 
+  .container {
+    height: 100%;
+    overflow: scroll;
+  }
   header {
     background-color: #323232;
-
   }
 
   header h1 {
@@ -96,7 +99,7 @@
     background-color: #323232;
     line-height: 1;
     background-attachment: relative;
-    overflow: scroll;
+    
   }
 
   footer div.open_space {
@@ -112,6 +115,7 @@
   #error_explanation {
     padding-left: 40px;
   }
+
   .error_msg {
     padding-left: 40px;
   }

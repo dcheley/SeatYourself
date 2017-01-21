@@ -12,37 +12,39 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <p id="notice"><%= flash[:notice] %></p>
-    <% end %>
-    <% if flash[:alert] %>
-      <p id="alert"><%= flash[:alert] %></p>
-    <% end %>
-    <header>
-      <% if current_user %>
-        <div id="alert">Signed in as <%= current_user.email %>.</div>
-        <div class="btn btn-alt"><%= link_to "Log out", session_path("current"), :method => :delete %></div>
-      <% else %>
-        <div class="btn btn-alt"><%= link_to "Sign up", new_user_path %></div><div class="btn btn-alt"><%= link_to "Log in", new_session_path %></div>
+    <div class="container">
+      <% if flash[:notice] %>
+        <p id="notice"><%= flash[:notice] %></p>
       <% end %>
-
-      <% if current_user %>
-      <div class="btn btn-alt"><%= link_to "Profile", "/users/#{session[:user_id]}" %></div>
+      <% if flash[:alert] %>
+        <p id="alert"><%= flash[:alert] %></p>
       <% end %>
-      <a class = "nav_item" href='/restaurants'>Restaurants</a>
+      <header>
+        <% if current_user %>
+          <div id="alert">Signed in as <%= current_user.email %>.</div>
+          <div class="btn btn-alt"><%= link_to "Log out", session_path("current"), :method => :delete %></div>
+        <% else %>
+          <div class="btn btn-alt"><%= link_to "Sign up", new_user_path %></div><div class="btn btn-alt"><%= link_to "Log in", new_session_path %></div>
+        <% end %>
+
+        <% if current_user %>
+        <div class="btn btn-alt"><%= link_to "Profile", "/users/#{session[:user_id]}" %></div>
+        <% end %>
+        <a class = "nav_item" href='/restaurants'>Restaurants</a>
 
 
-      <div class="logo_style">
-      <a href="/"><%= image_tag "seatyourself.png", :class => "logo" %></a>
-      </div>
+        <div class="logo_style">
+        <a href="/"><%= image_tag "seatyourself.png", :class => "logo" %></a>
+        </div>
 
 
-      <div class="white_bar"></div>
+        <div class="white_bar"></div>
 
-    </header>
-    <%= yield %>
-    <footer>
-      <div class="open_space"></div>
-    </footer>
+      </header>
+      <footer>
+        <div class="open_space"></div>
+      </footer>
+      <%= yield %>
+    </div>
   </body>
 </html>
