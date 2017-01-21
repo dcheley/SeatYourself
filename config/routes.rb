@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  #/login 'session#new'
+  #/logout 'session#destroy'
   root 'pages#home'
 
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]

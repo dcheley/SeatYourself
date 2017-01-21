@@ -13,6 +13,12 @@ class SessionsController < ApplicationController
     end
   end
 
+  #def create
+#    @user = User.find_by(:email => params[:email])
+  #  if @user.authernticate(params[:password]
+  #    session[:user_id]) = @user.#  redirect_to root_url
+# end
+
   def destroy
     session[:user_id] = nil
     redirect_to restaurants_url, notice: "Logged out!"

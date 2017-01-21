@@ -1,13 +1,24 @@
-#SeatYourself Application
+# README
 
-#Features:
-1. Users can fuzzy Search for restaurants by name or category using the search bar.
-2. Users can book view info about reservations with restaurants.
-3. Users can write and and view reviews for restaurants.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-#Command Line Setup
-1. "bundle install"
-2. "rails s"
-3. "rails db:seed"
-4. Open a web browser.
-5. Enter 'localhost:3000.com' into the URL to view and use the app.
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

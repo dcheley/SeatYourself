@@ -11,10 +11,11 @@ class ReservationsController < ApplicationController
   end
 
   def edit
-    @reservation = Reservation.find(params[:id])
+    # @reservation = Reservation.find(params[:id])
   end
 
   def create
+  # @restaurant = Restaurant.find(params[:restaurant_id])
     @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.user = current_user
 
@@ -24,9 +25,9 @@ class ReservationsController < ApplicationController
       render 'restaurants/show'
     end
   end
-  def update
-    @reservation = Reservation.find(params[:id])
 
+  def update
+    # @reservation = Reservation.find(params[:id])
     if @reservation.update_attributes(reservation_params)
       redirect_to restaurant_url
     else
