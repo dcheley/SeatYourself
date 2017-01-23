@@ -10,4 +10,4 @@
 2. "rails s"
 3. "rails db:setup"
 4. Open a web browser.
-5. Enter 'localhost:3000.com' into the URL to view and use the app.
+5. Enter `http://localhost:3000` into the URL to view and use the app.
